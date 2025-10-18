@@ -1,3 +1,3 @@
-#Api parcial 2 , desarrollo de software 2 
+- Api parcial 2 , desarrollo de software 2 
 
-#HUMBERTO FAJARDO - ID:409483
+- HUMBERTO FAJARDO - ID:409483
