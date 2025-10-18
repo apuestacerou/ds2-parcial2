@@ -1,6 +1,7 @@
 - Api parcial 2 , desarrollo de software 2
 - 2 BRANCHES -> MAIN AND MASTER
 - HUMBERTO FAJARDO - ID:409483
+- video url : https://www.youtube.com/watch?v=x4ONRNNw-ao
 # 🧩 Descripción del Proyecto
 
 **API REST** para gestión de tareas implementada con **arquitectura limpia** en **Node.js + Express**.  
