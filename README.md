@@ -1,28 +1,37 @@
 - Api parcial 2 , desarrollo de software 2
 - 2 BRANCHES -> MAIN AND MASTER
 - HUMBERTO FAJARDO - ID:409483
+# 🧩 Descripción del Proyecto
 
-Descripción del Proyecto
-API REST para gestión de tareas implementada con arquitectura limpia en Node.js + Express. El sistema permite crear, listar, actualizar y eliminar tareas con diferentes estados (pending, in-progress, completed).
+**API REST** para gestión de tareas implementada con **arquitectura limpia** en **Node.js + Express**.  
+El sistema permite **crear, listar, actualizar y eliminar tareas** con diferentes estados:  
+`pending`, `in-progress`, `completed`.
 
-2. Decisiones de Diseño
-Arquitectura Limpia Implementada
-Se implementó una arquitectura limpia con separación estricta de responsabilidades siguiendo el patrón de capas:
+---
 
-Controller Layer: Maneja únicamente las peticiones HTTP, validación básica de parámetros y formateo de respuestas. No contiene lógica de negocio ni acceso directo a datos.
+## 🧱 2. Decisiones de Diseño
 
-Service Layer: Contiene toda la lógica de negocio, orquestación de operaciones y validaciones de reglas de negocio. Actúa como intermediario entre los controllers y repositories.
+###  Arquitectura Limpia Implementada
 
-Repository Layer: Encapsula completamente el acceso a datos, proporcionando una interfaz limpia para operaciones CRUD sin exponer detalles de implementación.
+Se implementó una **arquitectura limpia** con **separación estricta de responsabilidades**, siguiendo el patrón de capas:
 
-Model Layer: Representa el dominio puro de la aplicación con lógica específica del negocio (como el cálculo automático de isOverdue).
+#### 🔹 Controller Layer
+Maneja únicamente las peticiones HTTP, validación básica de parámetros y formateo de respuestas.  
+No contiene lógica de negocio ni acceso directo a datos.
 
-DTO Layer: Maneja la transferencia de datos entre capas, validando entrada y formateando salida.
+#### 🔹 Service Layer
+Contiene toda la **lógica de negocio**, orquestación de operaciones y validaciones de reglas de negocio.  
+Actúa como intermediario entre los *controllers* y *repositories*.
 
-Esta separación garantiza mantenibilidad, testabilidad y cumplimiento de los principios SOLID. La arquitectura permite cambiar la implementación de persistencia (de memoria a base de datos) sin afectar las capas superiores.
+#### 🔹 Repository Layer
+Encapsula completamente el **acceso a datos**, proporcionando una interfaz limpia para operaciones CRUD  
+sin exponer detalles de implementación.
 
-Decisiones Técnicas
-Node.js + Express: Elegido por su simplicidad, amplio ecosistema y adecuación para APIs REST ligeras.
-Almacenamiento en memoria: Implementado para simplicidad y portabilidad, fácilmente reemplazable por bases de datos.
-Validaciones estrictas: Fechas futuras obligatorias, estados controlados, manejo consistente de errores.
-Respuestas JSON estructuradas: Formato consistente con campos success, data, message y error.
+#### 🔹 Model Layer
+Representa el **dominio puro** de la aplicación con lógica específica del negocio  
+(por ejemplo, el cálculo automático de `isOverdue`).
+
+#### 🔹 DTO Layer
+Maneja la **transferencia de datos entre capas**, validando la entrada y formateando la salida.
+
+> 💡 Esta separación garantiza **mantenibilidad**, **testabilidad** y cumplimiento
